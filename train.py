@@ -54,7 +54,7 @@ model.fit(
     x_train,
     y_train,
     batch_size=32,
-    epochs=10
+    epochs=300
 )
 
 model.save(models.MODEL_H5_NAME)
