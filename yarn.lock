@@ -2,9 +2,9 @@
 # yarn lockfile v1
 
 
-canvas@^1.6.2:
-  version "1.6.2"
-  resolved "https://registry.yarnpkg.com/canvas/-/canvas-1.6.2.tgz#12b56e3f00e7880aa45e3aae59fe75237720aaa4"
+canvas@^1.6.10:
+  version "1.6.10"
+  resolved "https://registry.yarnpkg.com/canvas/-/canvas-1.6.10.tgz#aa938354642e7d61479ae5a76373b3233d7bbac8"
   dependencies:
     nan "^2.4.0"
 
