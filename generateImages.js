@@ -86,6 +86,36 @@ for (let i = 0; i < numImages; i++) {
   let second = parseInt(60 * Math.random());
 
   let fileName = `clock_${hour}_${minute}_${second}.png`;
+  let filePath = path.join(__dirname, 'data/train', fileName);
+  if (fs.existsSync(filePath)) {
+    continue;
+  }
+
+  let canvas = Canvas.createCanvas(640, 480);
+  let ctx = canvas.getContext("2d");
+  let radius = canvas.height / 2;
+  ctx.translate(canvas.width/2, radius);
+  radius = radius * 0.90;
+  drawClock(ctx, radius, hour, minute, second);
+
+  let out = fs.createWriteStream(filePath)
+    , stream = canvas.pngStream();
+
+  stream.on('data', function(chunk) {
+    out.write(chunk);
+  });
+  stream.on('end', function(){
+    console.log(`${i}: Saved ${filePath}`);
+  });
+}
+
+const numImages = 500;
+for (let i = 0; i < numImages; i++) {
+  let hour = parseInt(12 * Math.random());
+  let minute = parseInt(60 * Math.random());
+  let second = parseInt(60 * Math.random());
+
+  let fileName = `clock_${hour}_${minute}_${second}.png`;
   let filePath = path.join(__dirname, 'data/validation', fileName);
   if (fs.existsSync(filePath)) {
     continue;

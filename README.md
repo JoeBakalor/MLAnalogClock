@@ -1,3 +1,5 @@
+# MLAnalogClock - Keras model setup, training, and mlmodel generation for reading analog clocks
+
 ## Setup (MacOS)
 
 1. Install nodejs & npm <br />
@@ -18,7 +20,9 @@
 5. Intall giflib <br />
 `brew install giflib`
 
-**Usage**
+## Usage
 
-* Open terminal in /MLAnalogClock, 
+### Generate training and validation data
+
+* Open terminal in /MLAnalogCloc and run <br />
 `node generateImages.js`
