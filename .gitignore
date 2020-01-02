@@ -3,4 +3,4 @@ node_modules
 *.h5
 *.pyc
 data
-time.mlmodel
+*.mlmodel
