@@ -1,10 +1,24 @@
-# Setup (Ubuntu)
+## Setup (MacOS)
 
 * Install nodejs & npm
-* Install yarn
-* `sudo apt-get install libcairo2-dev libjpeg8-dev libpango1.0-dev libgif-dev build-essential g++`
-* `yarn`
+* `brew install node`
+
+* Intall ciaro
+* `brew install cairo`
+
+
+* Intall libjpeg
+* `brew install libjpeg`
+
+
+* Intall pango
+* `brew install pango`
+
+
+Intall giflib
+`brew install giflib`
 
 # Usage
 
+* Open terminal in /MLAnalogClock
 `node generateImages.js`
