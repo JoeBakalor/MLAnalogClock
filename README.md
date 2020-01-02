@@ -1,6 +1,6 @@
 ## Setup (MacOS)
 
-1. Install nodejs & npm
+1. Install nodejs & npm \n
 `brew install node`
 
 * Intall ciaro
