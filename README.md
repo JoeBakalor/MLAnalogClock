@@ -3,22 +3,22 @@
 1. Install nodejs & npm <br />
 `brew install node`
 
-* Intall ciaro
-* `brew install cairo`
+2. Install ciaro <br />
+`brew install cairo`
 
 
-* Intall libjpeg
-* `brew install libjpeg`
+3. Intall libjpeg <br />
+`brew install libjpeg`
 
 
-* Intall pango
-* `brew install pango`
+4. Intall pango <br />
+`brew install pango`
 
 
-Intall giflib
+5. Intall giflib <br />
 `brew install giflib`
 
-# Usage
+**Usage**
 
-* Open terminal in /MLAnalogClock
+* Open terminal in /MLAnalogClock, 
 `node generateImages.js`
