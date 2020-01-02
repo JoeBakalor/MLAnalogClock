@@ -24,5 +24,17 @@
 
 ### Generate training and validation data
 
-* Open terminal in /MLAnalogCloc and run <br />
+* From within /MLAnalogCloc folder, run <br />
 `node generateImages.js`
+
+### Model creation and training
+
+```
+sudo python3 train.py
+```
+
+### Testing
+
+```
+python3 predict.py
+```
