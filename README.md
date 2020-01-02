@@ -1,5 +1,7 @@
 # MLAnalogClock - Keras model setup, training, and mlmodel generation for reading analog clocks
 
+This is a WIP.  Currently, the training data only covers
+
 ## Setup (MacOS)
 
 1. Install nodejs & npm <br />

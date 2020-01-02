@@ -8,7 +8,7 @@ import models
 
 keras_backend.set_image_data_format('channels_last')
 
-model = load_model('time.h5')
+model = load_model('testModel.h5')
 
 image_dir = os.path.join('data', 'validation')
 
@@ -22,11 +22,11 @@ print(type(x_validation))
 print(type(y_validation))
 
 if keras_backend.image_data_format() == 'channels_first':
-    x_validation = x_validation.reshape(x_validation.shape[0], 1, 640, 480)
-    input_shape = (1, 640, 480)
+    x_validation = x_validation.reshape(x_validation.shape[0], 1, 480, 480)
+    input_shape = (1, 480, 480)
 else:
-    x_validation = x_validation.reshape(x_validation.shape[0], 640, 480, 1)
-    input_shape = (640, 480, 1)
+    x_validation = x_validation.reshape(x_validation.shape[0], 480, 480, 1)
+    input_shape = (480, 480, 1)
 
 hour_matches = 0
 minute_matches = 0
@@ -43,8 +43,6 @@ for i in range(len(x_validation)):
         np.array([x_sample]),
         verbose=0
     )[0]
-
-    print(str(y_predicted))
 
     predicted_time = interpret_y_vector(y_predicted)
 

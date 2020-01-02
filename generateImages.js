@@ -79,7 +79,7 @@ function drawHand(ctx, pos, length, width) {
   ctx.rotate(-pos);
 }
 
-const numImages = 500;
+const numImages = 1000;
 for (let i = 0; i < numImages; i++) {
   let hour = parseInt(12 * Math.random());
   let minute = parseInt(60 * Math.random());
@@ -91,7 +91,7 @@ for (let i = 0; i < numImages; i++) {
     continue;
   }
 
-  let canvas = Canvas.createCanvas(640, 480);
+  let canvas = Canvas.createCanvas(480, 480);
   let ctx = canvas.getContext("2d");
   let radius = canvas.height / 2;
   ctx.translate(canvas.width/2, radius);
@@ -108,9 +108,8 @@ for (let i = 0; i < numImages; i++) {
     console.log(`${i}: Saved ${filePath}`);
   });
 }
-
-const numImages = 500;
-for (let i = 0; i < numImages; i++) {
+const numSamples = 50;
+for (let i = 0; i < numSamples; i++) {
   let hour = parseInt(12 * Math.random());
   let minute = parseInt(60 * Math.random());
   let second = parseInt(60 * Math.random());
@@ -121,7 +120,7 @@ for (let i = 0; i < numImages; i++) {
     continue;
   }
 
-  let canvas = Canvas.createCanvas(640, 480);
+  let canvas = Canvas.createCanvas(480, 480);
   let ctx = canvas.getContext("2d");
   let radius = canvas.height / 2;
   ctx.translate(canvas.width/2, radius);

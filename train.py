@@ -54,7 +54,7 @@ validation_dir = os.path.join('data', 'validation')
 num_train_samples = len(x_train)
 num_validation_samples = len(x_validation)
 
-img_width = 640
+img_width = 480
 img_height = 480
 
 num_color_channels = 1  # 1 means greyscale
@@ -84,16 +84,17 @@ generator.shakeVariance = 16
 #Use this for longer
 #Learn(model, generator)
 #Train(generator, model, 200)
-'''
+
 model.fit(
     x_train,
     y_train,
     batch_size=32,
-    epochs=100
+    epochs=20
 )
 
-model.save(models.MODEL_H5_NAME)
-'''
+model.save('testModel.h5')
+#model.save(models.MODEL_H5_NAME)
+
 
 output_labels = []
 for i in range(0,12):
@@ -103,17 +104,8 @@ for i in range(0,60):
 for i in range(0,60):
 	output_labels.append("second%d" % i)
 
-'''
-for i in range(0,495):
-    time = interpret_y_vector(y_train[i])
-    output_labels.append(
-                'hour:{0},minute:{1},seconds{2}'.format(
-                str(time[0]),
-                str(time[1]),
-                str(time[2])
-            ))
-    print(interpret_y_vector(y_train[i]))
-'''
-coreml_model = coremltools.converters.keras.convert(models.MODEL_H5_NAME,input_names='image',image_input_names='image', image_scale=1/255.0)
-coreml_model.save('time.mlmodel')
+coreml_model = coremltools.converters.keras.convert('testModel.h5',input_names=['image'],image_input_names='image', class_labels=output_labels, image_scale=1/255.0)
+#coreml_model = coremltools.converters.keras.convert(models.MODEL_H5_NAME,input_names=['image'],image_input_names='image', class_labels=output_labels, image_scale=1/255.0)
+coreml_model.save('timeTest.mlmodel')
+#coreml_model.save('time.mlmodel')
 print(coreml_model)
