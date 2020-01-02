@@ -10,6 +10,9 @@ import coremltools
 MODEL_H5_NAME = "time.h5"
 print('keras version ', keras.__version__)
 
+INCLUDE_SECONDS_HAND = True
+IMG_SIZE = [640,480,1]
+
 def get_cnn_model(num_color_channels, img_width, img_height):
     model = Sequential()
     model.add(Conv2D(32, (3, 3),input_shape=(img_width, img_height, num_color_channels), activation='relu'))

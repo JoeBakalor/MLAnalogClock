@@ -6,6 +6,6 @@
   "author": "Iver Jordal",
   "license": "MIT",
   "dependencies": {
-    "canvas": "^1.6.10"
+    "canvas": "^2.6.1"
   }
 }
