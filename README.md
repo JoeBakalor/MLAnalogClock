@@ -3,38 +3,49 @@
 ## Setup (MacOS)
 
 1. Install nodejs & npm <br />
-`brew install node`
+```
+brew install node
+```
 
 2. Install ciaro <br />
-`brew install cairo`
-
+```
+brew install cairo
+```
 
 3. Intall libjpeg <br />
-`brew install libjpeg`
-
+```
+brew install libjpeg
+```
 
 4. Intall pango <br />
-`brew install pango`
-
+```
+brew install pango
+```
 
 5. Intall giflib <br />
-`brew install giflib`
+```
+brew install giflib
+```
 
 ## Usage
 
 ### Generate training and validation data
 
-* From within /MLAnalogCloc folder, run <br />
-`node generateImages.js`
+From within /MLAnalogCloc folder, run <br />
+```
+node generateImages.js
+```
 
 ### Model creation and training
 
+From within /MLAnalogCloc folder, run <br />
 ```
 sudo python3 train.py
 ```
 
 ### Testing
 
+From within /MLAnalogCloc folder, run <br />
 ```
 python3 predict.py
 ```
